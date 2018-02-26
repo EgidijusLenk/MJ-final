@@ -28,7 +28,6 @@ body {overflow: hidden;margin: unset;}
     position: relative;font-size: 1.1em;z-index: 10;font-family: 'Poiret One', cursive;font-weight: bold;}
 .nuoroda:active {background-color: rgb(255, 174, 0);}
 .nuoroda:focus {outline:none;background-color: rgb(255, 174, 0);}
-a:focus {background-color: rgb(255, 174, 0);z-index: 20;padding: 5px 0px 1px 0px;color: antiquewhite;}
 .nuoroda:hover {color: antiquewhite;}
 .nuoroda::before {content: "";height: 105%;width: 1%;display: block;position: absolute;left: 100%;top: -10%;
     padding-top: 10px; z-index: -1;opacity: 1;transition: all 0.45s ease-out 0s;}
@@ -45,6 +44,7 @@ a:focus {background-color: rgb(255, 174, 0);z-index: 20;padding: 5px 0px 1px 0px
     font-family: 'Raleway', sans-serif;font-size: 2.6em;z-index: 10;}
 #sprendimai{position: absolute; left:405px;top:49px;background-image: url('../images/tekstura1.jpeg')}
 a {text-decoration:none;color:inherit;}
+a:focus {background-color: rgb(255, 174, 0);z-index: 20;padding: 5px 0px 1px 0px;color: antiquewhite;}
 
 /* LEFT SIDE  */
 .owl-stage-outer {height: 100%;}
@@ -58,9 +58,7 @@ ul, li {position: absolute;list-style: none;list-style-type: none; display: bloc
 .tekstas {display: block;padding: 5%;width: fit-content;position: absolute; top: 185px;
     font-family: 'Quicksand', sans-serif;font-weight: medium;font-size: .9em;
     height: unset;z-index: 3;}
-
 .tekstas::before {
-    
         content: "";
         background-color: rgb(230, 222, 117);
         background-size: 100%;
@@ -69,7 +67,6 @@ ul, li {position: absolute;list-style: none;list-style-type: none; display: bloc
         top: 0;left: 0;bottom: 0;right: 0;position: absolute;z-index: -1; }
 
 /* for mobile */
-
 @media (max-width: 768px) { 
     body {margin: 0;overflow: auto;}
     #main {border: none;overflow: auto;
