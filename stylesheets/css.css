@@ -4,27 +4,24 @@ body {overflow: hidden;margin: unset;}
      margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    /* border: 1px solid blue;  */
     display: grid;
     grid-template-columns: 1fr 25px 50%;
     grid-template-areas:
     "leftside leftside headeris"
-    "leftside leftside veidomasazai"
-    "leftside leftside jogospamokos"
-    "leftside leftside biorezonansas"
-    "leftside leftside biorezonansas";}
+    "leftside leftside area1"
+    "leftside leftside area2"
+    "leftside leftside area3"
+    "leftside leftside area3";}
 .leftside {
     height: 100%; width: 100%;
-    /* border: 1px solid red; */
     grid-area: leftside;
     overflow: hidden;
     position: relative;}
     
 #headeris {grid-area: headeris;background-image: url('../images/Pink_And_Turquoise_Sunset.jpg');background-size:100% 190%;}
-#veidomasazai {grid-area: veidomasazai;}
-#jogospamokos {grid-area: jogospamokos;background-image: url('../images/geotexture.jpg');
-    background-size: 130%;}
-#biorezonansas {grid-area: biorezonansas;background-size: 100%;background-image: url('../images/tekstura2.jpeg');}
+#area1 {grid-area: area1;}
+#area2 {grid-area: area2;background-image: url('../images/geotexture.jpg'); background-size: 130%;}
+#area3 {grid-area: area3;background-size: 100%;background-image: url('../images/tekstura2.jpeg');}
 .nuoroda {padding: 5px 0px 1px 0px;border:none;background-color:transparent; 
     transition: all 0.45s ease;overflow: hidden;
     color:#444c57; display: block; margin: 10px auto 0px auto;
@@ -45,56 +42,31 @@ a:focus {background-color: rgb(255, 174, 0);z-index: 20;padding: 5px 0px 1px 0px
     background-color:#FEEEDA;
      background-image: url('../images/tekstura1.jpeg');
      background-size: cover;
-    font-family: 'Raleway', sans-serif;font-size: 2.6em;
-z-index: 10;}
+    font-family: 'Raleway', sans-serif;font-size: 2.6em;z-index: 10;}
 #sprendimai{position: absolute; left:405px;top:49px;background-image: url('../images/tekstura1.jpeg')}
-
 a {text-decoration:none;color:inherit;}
-
-
-
-
-
-
-
-
-
 
 /* LEFT SIDE  */
 .owl-stage-outer {height: 100%;}
 .owl-dots {position: relative;
-    top: -55px;
-    z-index: 4;}
+    top: -55px;z-index: 4;}
 ul, li {position: absolute;list-style: none;list-style-type: none; display: block; width: 100%;height: 100%;
     padding: 0;margin: 0;}  
 .leftSideImg {width: 100%;display: block;position: relative;}
+.pavadinimas {text-align: center;margin: 0;font-weight: 200;}
 
 .tekstas {display: block;padding: 5%;width: fit-content;position: absolute; top: 185px;
     font-family: 'Quicksand', sans-serif;font-weight: medium;font-size: .9em;
     height: unset;z-index: 3;}
-.pavadinimas {text-align: center;margin: 0;font-weight: 200;}
-/* .leftSideImageslist {height: 400px;} */
-/* .unvisible {visibility: hidden;} */
 
 .tekstas::before {
     
         content: "";
         background-color: rgb(230, 222, 117);
-        /* background-image: url('images/tekstura2.jpeg'); */
         background-size: 100%;
         opacity: 0.8;
         filter: blur(1px);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1; 
-}
-
-
-
-
+        top: 0;left: 0;bottom: 0;right: 0;position: absolute;z-index: -1; }
 
 /* for mobile */
 
@@ -107,7 +79,7 @@ ul, li {position: absolute;list-style: none;list-style-type: none; display: bloc
     grid-template-columns: 100%;
     grid-template-areas:
     "headeris"
-    "jogospamokos"
+    "area2"
     "leftside""leftside""leftside"
     "leftside";}
     .leftside {height: auto;overflow: visible;}
@@ -116,6 +88,6 @@ ul, li {position: absolute;list-style: none;list-style-type: none; display: bloc
     #headerTitle {top:0px;left: 0px;}
     .owl-stage-outer {min-height: 500px;}
     #sprendimai {position: unset;}
-    #jogospamokos {background-size: 300%;}
+    #area2 {background-size: 300%;}
 
 }
