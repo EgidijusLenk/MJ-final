@@ -1,9 +1,21 @@
-body {overflow: hidden;margin: unset;}
-
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Marcellus|Playfair+Display+SC|Ultra');
+body {overflow: hidden;margin: unset;
+    /* background-image: url('../images/tekstura2.jpeg'); */
+    background-size: cover;
+}
+body::before {
+    content: '';
+    background-color: rgb(230, 222, 117);
+        background-size: cover;
+        /* opacity: 0.8; */
+        filter: blur(2px) grayscale(5%)  sepia(100%);
+        background-image: url('../images/paul-morris-184486-unsplash.jpg');
+        top: 0;left: 0;bottom: 0;right: 0;position: absolute;z-index: -1;
+}
 #main {overflow: hidden;
      margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 90vh;
     display: grid;
     grid-template-columns: 1fr 25px 50%;
     grid-template-areas:
@@ -11,7 +23,12 @@ body {overflow: hidden;margin: unset;}
     "leftside leftside area1"
     "leftside leftside area2"
     "leftside leftside area3"
-    "leftside leftside area3";}
+    "leftside leftside area3";
+    position: relative;top:30px;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+    
 .leftside {
     height: 100%; width: 100%;
     grid-area: leftside;
@@ -19,9 +36,9 @@ body {overflow: hidden;margin: unset;}
     position: relative;}
     
 #headeris {grid-area: headeris;background-image: url('../images/Pink_And_Turquoise_Sunset.jpg');background-size:100% 190%;}
-#area1 {grid-area: area1;}
+#area1 {grid-area: area1;background-color: rgb(230, 222, 117);}
 #area2 {grid-area: area2;background-image: url('../images/geotexture.jpg'); background-size: 130%;}
-#area3 {grid-area: area3;background-size: 100%;background-image: url('../images/tekstura2.jpeg');}
+#area3 {grid-area: area3;background-image: url('../images/tekstura2.jpeg');background-size: 100%;}
 .nuoroda {padding: 5px 0px 1px 0px;border:none;background-color:transparent; 
     transition: all 0.45s ease;overflow: hidden;
     color:#444c57; display: block; margin: 10px auto 0px auto;
@@ -37,12 +54,57 @@ body {overflow: hidden;margin: unset;}
 .nuoroda:hover::after {width: 101% !important;opacity: 1;color: #FFF;background-color: rgb(255, 174, 0);right: 150%;}
 .nuoroda:active .nuoroda:visited {border: none;}
 
-#headerTitle {position: relative;top:30px;left: -55px; 
+#headerTitle {position: relative;top:60px;left: -55px; 
     background-color:#FEEEDA;
-     background-image: url('../images/tekstura1.jpeg');
-     background-size: cover;
-    font-family: 'Raleway', sans-serif;font-size: 2.6em;z-index: 10;}
-#sprendimai{position: absolute; left:405px;top:49px;background-image: url('../images/tekstura1.jpeg')}
+     background-image: url('../images/geotexture.jpg');
+     
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.6em;z-index: 10;
+    font-weight: bold;
+    
+    color:transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-font-smoothing:antialiased;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    animation:BackgroundAnimacija 60s linear infinite alternate;
+    
+
+}
+@keyframes BackgroundAnimacija {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+}
+
+#sprendimai{position: absolute; left:350px;top:49px;z-index: 10;
+    background-image: url('../images/geotexture.jpg');
+    background-color: #FEEEDA;
+    color:transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-font-smoothing:antialiased;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    font-size: 0.7em;
+    animation:BackgroundAnimacijaSprendimai 70s linear infinite alternate;
+
+
+
+}
+
+@keyframes BackgroundAnimacijaSprendimai {
+    from {
+        background-position:100% 0
+    }
+    to {
+        background-position:0 0
+    }
+}
 a {text-decoration:none;color:inherit;}
 a:focus {background-color: rgb(255, 174, 0);z-index: 20;padding: 5px 0px 1px 0px;color: antiquewhite;}
 
@@ -55,7 +117,7 @@ ul, li {position: absolute;list-style: none;list-style-type: none; display: bloc
 .leftSideImg {width: 100%;display: block;position: relative;}
 .pavadinimas {text-align: center;margin: 0;font-weight: 200;}
 
-.tekstas {display: block;padding: 5%;width: fit-content;position: absolute; top: 185px;
+.tekstas {display: block;padding: 5%;width: fit-content;position: absolute; top: 340px;
     font-family: 'Quicksand', sans-serif;font-weight: medium;font-size: .9em;
     height: unset;z-index: 3;}
 .tekstas::before {
